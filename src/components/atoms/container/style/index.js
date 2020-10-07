@@ -20,6 +20,7 @@ export const GreyContentContainer = styled(ContainerColumn)`
   min-height: 100vh;
   background-color: ${props => props.theme.color.grey};
   color: ${props => props.theme.color.yellow};
+  overflow: none;
 `;
 
 export const YellowContentContainer = styled(ContainerColumn)`
@@ -27,6 +28,7 @@ export const YellowContentContainer = styled(ContainerColumn)`
   min-height: 100vh;
   background-color: ${props => props.theme.color.yellow};
   color: ${props => props.theme.color.grey};
+  overflow: none;
 `;
 
 export const ContainerHalfway = styled(ContainerColumn)`
@@ -78,6 +80,39 @@ export const PokemonContainer = styled.div`
   height: 12.0rem;
   border-radius: 1.0rem;
   margin: 1.2rem;
-`
+`;
+
+export const PokemonsContainer = styled.div`
+  display: flex;
+`;
+
+export const TrainerListCards = styled.div`
+  display: flex;
+  justify-content: space-around;
+`; 
+
+export const TrainerCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.0rem;
+  background-color: ${props => props.theme.color.white};
+  padding: 0.8rem 1.6rem;
+  min-width: 20rem;
+  margin: 1.0rem;
+  text-align: center;
+`;
+
+export const TrainerInformations = styled(TrainerListCards)`
+`;
+
+export const Grid = styled.div`
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-gap: 1rem;
+`;
 
 export default ContainerColumn

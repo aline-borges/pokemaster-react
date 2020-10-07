@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import Header from '../../components/molecules/header/';
-import { YellowContentContainer, ContainerColumn, TeamContainer, PokemonContainer } from "../../components/atoms/container/style/";
-import { GreyButton, TextGreyButton, YellowButton, TextYellowButton, PlusButton } from '../../components/atoms/buttons/';
-import { Name, Age } from '../../components/atoms/texts/';
-import { Icon, Sex } from '../../components/atoms/icons/';
+import { DarkHeader } from '../../components/molecules/header/';
+import { YellowContentContainer, ContainerColumn, PokemonContainer, TrainerInformations, 
+         PokemonsContainer, TeamContainer } from "../../components/atoms/container/style/";
+import { PlusButton } from '../../components/atoms/buttons/';
+import { Name, Age, TeamName } from '../../components/atoms/texts/';
+import { TeamIcon, Gender } from '../../components/atoms/icons/';
+import { Photo, PokemonImage } from '../../components/atoms/images/';
 
-import plus from  '../../assets/icons/plus.png';
-import edit from '../../assets/icons/edit.png';
-import female from '../../assets/icons/female.png'
-import male from '../../assets/icons/male.png'
+import female from '../../assets/icons/female.png';
+import male from '../../assets/icons/male.png';
+import pokeball from '../../assets/icons/darkPokeball.png';
 
 const TrainerHomeProfile = () => {
   const [trainer, setTrainer] = useState({});
   const [loading, setLoading] = useState(true);
   const [editing, setEditing] = useState(false);
   const [newName, setNewName] = useState('');
-  const [changedName, setChangedName] = useState(false);
+  const [changedName, setChangedName] = useState(false);  
 
   const { trainerId } = useParams();
 
@@ -56,21 +57,18 @@ const TrainerHomeProfile = () => {
 
   return (
     <YellowContentContainer>
-      <Header />
+      <DarkHeader />
       <ContainerColumn>
         {loading ? (<div>Carregando</div>)
         : (
           <>
+            <Photo src={trainer.photo} alt={trainer.Name} />
             <Name>{trainer.name}</Name>
-            <Age>{trainer.age}</Age>
-            <Sex src={trainer.sex === 'female' ? female : male} alt="Gender symbol" />
-            <GreyButton>
-              <TextGreyButton>
-                Add a Team
-                <Icon src={plus} />
-              </TextGreyButton>
-            </GreyButton>
-            <ul>
+            <TrainerInformations>
+              <Age>{trainer.age}</Age>
+              <Gender src={trainer.sex === 'female' ? female : male} alt="Gender symbol" />
+            </TrainerInformations>
+            <TeamContainer>
               {trainer.teams.map(team => (
                 <li key={team.id}>
                   {editing ? (
@@ -79,30 +77,27 @@ const TrainerHomeProfile = () => {
                       <button type="submit" onClick={(e) => handleNameSubmit(e, team)}>Salvar</button>
                     </form>
                   ) : (
-                    <h2 onClick={() => setEditing(true)}>{team.name}</h2>
+                    <TeamName onClick={() => setEditing(true)}>
+                      {team.name}
+                      <TeamIcon src={pokeball} />
+                    </TeamName>
                   )}
-                  <ul>
+                  <PokemonsContainer>
                     {team.pokemons.map(pokemon => (
-                      <li key={pokemon.id}>
+                      <PokemonContainer key={pokemon.id}>
                           {pokemon.photo ? (
-                            <img src={`https://github.com/ZeChrales/PogoAssets/blob/master/pokemon_icons/pokemon_icon_${pokemon.photo}_00.png?raw=true`} alt={pokemon.name} />
+                            <PokemonImage src={`https://github.com/ZeChrales/PogoAssets/blob/master/pokemon_icons/pokemon_icon_${pokemon.photo}_00.png?raw=true`} alt={pokemon.name} />
                           ) : (
                             <PokemonContainer>
                               <PlusButton>+</PlusButton>
                             </PokemonContainer>
                           )}
-                      </li>
+                      </PokemonContainer  >
                     ))}
-                  </ul>
+                  </PokemonsContainer>
                 </li>
               ))}
-            </ul>
-            <YellowButton>
-              <TextYellowButton>
-                Edit My Team
-                <Icon src={edit} />
-              </TextYellowButton>
-            </YellowButton>
+            </TeamContainer>
           </>
         )}
       </ContainerColumn>

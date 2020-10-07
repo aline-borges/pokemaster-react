@@ -5,6 +5,12 @@ export const Icon = styled.img`
   width: 1.2rem;
 `;
 
-export const Sex = styled(Icon)``;
+export const Gender = styled.img`
+  margin-left: 2rem;
+`;
+
+export const TeamIcon = styled.img`
+  margin-left: 2rem;
+`;
 
 export default Icon 

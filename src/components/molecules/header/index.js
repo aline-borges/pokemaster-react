@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../../../assets/logos/yellow.png';
+import darkLogo from '../../../assets/logos/dark.png';
 import { Link } from 'react-router-dom';
 
 export const Menu = styled.nav`
@@ -42,6 +43,24 @@ export const MenuOption = styled.li`
   }
 `;
 
+export const DarkMenuOption = styled(MenuOption)`
+  color: ${props => props.theme.color.grey};
+
+  &:hover {
+    padding: 8px 16px;
+    background-color: ${props => props.theme.color.grey};
+    color: ${props => props.theme.color.yellow};
+  }
+
+  a {
+    color: ${props => props.theme.color.grey};
+
+    &:hover {
+      color: ${props => props.theme.color.yellow};
+    }
+  }
+`;
+
 export const AppName = styled.div`
   margin-right: 5rem;
 `;
@@ -66,11 +85,39 @@ export const Header = () => {
             <Link to="/pokemons">Pokemons</Link>
           </MenuOption>
           <MenuOption>
-            <Link to="/trainer">Trainer</Link>            
+            <Link to="/trainerform">Be a Trainer</Link>            
           </MenuOption>
           <MenuOption>
             <Link to="/trainers">Trainers</Link>            
           </MenuOption>
+        </MenuList>
+      </Menu>
+    </header>
+  );
+}
+
+export const DarkHeader = () => {
+  return(
+    <header>
+      <Menu>
+        <AppName>
+          <Link to="/">
+            <Logo src={darkLogo} />
+          </Link>
+        </AppName>
+        <MenuList>
+          <DarkMenuOption>
+            <Link to="/">Home</Link>
+          </DarkMenuOption>
+          <DarkMenuOption>
+            <Link to="/pokemons">Pokemons</Link>
+          </DarkMenuOption>
+          <DarkMenuOption>
+            <Link to="/trainerform">Be a Trainer</Link>            
+          </DarkMenuOption>
+          <DarkMenuOption>
+            <Link to="/trainers">Trainers</Link>            
+          </DarkMenuOption>
         </MenuList>
       </Menu>
     </header>

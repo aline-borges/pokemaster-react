@@ -15,4 +15,13 @@ export const Image = styled.img`
 export const DefaultPhoto = styled.img`
   width: 12.9rem;
   margin: auto;
+`
+;
+export const Photo = styled.img`
+  width: 12.9rem;
+  margin: auto;
+`;
+
+export const PokemonImage = styled.img`
+  width: inherit;
 `;
