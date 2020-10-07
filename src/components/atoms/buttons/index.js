@@ -6,6 +6,7 @@ export const Button = styled.button`
   cursor: pointer;
   outline: none;
   border: 1px solid ${props => props.borderColor};
+  margin-top: 1.5rem;
 `;
 
 export const GreyButton = styled(Button)`
@@ -48,6 +49,17 @@ export const TextYellowButton = styled(TextButton)`
   &:hover {
     background-color: ${props => props.theme.color.darkYellow};
   }
+`;
+
+export const PlusButton = styled.button`
+  border: none;
+  background: transparent;
+  padding: 1.6rem;
+  cursor: pointer;
+  color: ${props => props.theme.color.extraLight};
+  font-size: ${props => props.theme.fontSize.large};
+  font-family: ${props => props.theme.font[1]};
+  outline: none;
 `;
 
 export default Button 

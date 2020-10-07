@@ -53,4 +53,31 @@ export const YellowContainer = styled(ContainerColumn)`
   min-height: 30rem;
 `;
 
+export const ContainerForm = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const TeamContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.theme.color.grey};
+  padding: .8rem 1.6rem;
+  border-radius: 1.0rem;
+  margin-top: 1.2rem;
+`;
+
+export const PokemonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.theme.color.lightGrey};
+  width: 12.0rem;
+  height: 12.0rem;
+  border-radius: 1.0rem;
+  margin: 1.2rem;
+`
+
 export default ContainerColumn

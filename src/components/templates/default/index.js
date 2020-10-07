@@ -16,23 +16,23 @@ const HomeTemplate = () => {
       <Header />
       <ContainerRow>
         <GreyContainer>
-          <PikachuImage src={pikachu} />
+          <PikachuImage src={pikachu} alt="pikachu" />
           <YellowButton>
             <Link to="/pokemons">
               <TextYellowButton>
                 Search For Pokemons
-                <Icon src={search} />
+                <Icon src={search} alt="search logo" />
               </TextYellowButton>
             </Link>
           </YellowButton>
         </GreyContainer>
         <YellowContainer>
-        <AshImage src={ash} />
+        <AshImage src={ash} alt="ash" />
         <GreyButton>
-          <Link to="/trainer">
+          <Link to="/trainerform">
             <TextGreyButton>
               Be a Trainer
-              <Icon src={pokeball} />
+              <Icon src={pokeball} alt="pokeball logo" />
             </TextGreyButton>
           </Link>
         </GreyButton>

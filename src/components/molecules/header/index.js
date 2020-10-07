@@ -43,7 +43,7 @@ export const MenuOption = styled.li`
 `;
 
 export const AppName = styled.div`
-  margin-right: 25rem;
+  margin-right: 5rem;
 `;
 
 export const Logo = styled.img`

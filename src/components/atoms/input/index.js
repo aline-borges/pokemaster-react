@@ -10,6 +10,8 @@ export const Input = styled.input`
   font-size: ${props => props.theme.fontSize.small};
   font-weight: ${props => props.theme.fontWeight.bold};
   background-color: transparent;
+  outline: none;
+  margin: 1.6rem;
 `;
 
 export const YellowInput = styled(Input)`
@@ -34,4 +36,9 @@ export const YellowLabel = styled(Input)`
 
 export const GreyLabel = styled(Input)`
   color: ${props => props.theme.color.grey};
+`;
+
+export const RadioButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;

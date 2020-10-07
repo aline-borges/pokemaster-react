@@ -11,3 +11,8 @@ export const AshImage = styled.img`
 export const Image = styled.img`
   min-width: auto;
 `;
+
+export const DefaultPhoto = styled.img`
+  width: 12.9rem;
+  margin: auto;
+`;
