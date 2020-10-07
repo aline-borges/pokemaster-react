@@ -13,7 +13,7 @@ const Trainers = () => {
   const [trainers, setTrainers] = useState([]);
 
   const getTrainers = async () => {
-    const response = await fetch(`//localhost:3000/trainers.json`);
+    const response = await fetch(`//pokemaster-api.herokuapp.com/trainers.json`);
     const trainers = await response.json();
     setTrainers(trainers);
   };

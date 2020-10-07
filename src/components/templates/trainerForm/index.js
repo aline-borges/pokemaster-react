@@ -30,7 +30,7 @@ const TrainerFormTemplate = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch('//localhost:3000/trainers.json', {
+    await fetch('//pokemaster-api.herokuapp.com/trainers.json', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

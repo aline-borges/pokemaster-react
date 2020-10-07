@@ -23,7 +23,7 @@ const TrainerHomeProfile = () => {
   const { trainerId } = useParams();
 
   const getTrainer = async id => {
-    const response = await fetch(`//localhost:3000/trainers/${id}.json`);
+    const response = await fetch(`//pokemaster-api.herokuapp.com/trainers/${id}.json`);
     const currentTrainer = await response.json();
     console.log(currentTrainer.teams);
     setTrainer(currentTrainer);
@@ -36,7 +36,7 @@ const TrainerHomeProfile = () => {
 
   const handleNameSubmit = async (e, team) => {
     e.preventDefault();
-    await fetch(`//localhost:3000/teams/${team.id}.json`, {
+    await fetch(`//pokemaster-api.herokuapp.com/teams/${team.id}.json`, {
       method: 'PUT',
       headers: {
         'Accept': 'application/json',
