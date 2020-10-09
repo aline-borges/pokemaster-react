@@ -34,7 +34,7 @@ export const MenuOption = styled.li`
     border-radius: 2.0rem;
   }
 
-  a {
+  li a {
     color: ${props => props.theme.color.yellow};
 
     &:hover {
@@ -52,7 +52,7 @@ export const DarkMenuOption = styled(MenuOption)`
     color: ${props => props.theme.color.yellow};
   }
 
-  a {
+  li a {
     color: ${props => props.theme.color.grey};
 
     &:hover {
