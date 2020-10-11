@@ -27,17 +27,17 @@ export const MenuOption = styled.li`
   color: ${props => props.theme.color.yellow};
   cursor: pointer;
 
+  a {
+    color: ${props => props.theme.color.yellow};
+  }
+
   &:hover {
     padding: 8px 16px;
     background-color: ${props => props.theme.color.yellow};
     color: ${props => props.theme.color.grey};
     border-radius: 2.0rem;
-  }
 
-  li a {
-    color: ${props => props.theme.color.yellow};
-
-    &:hover {
+    a {
       color: ${props => props.theme.color.grey};
     }
   }
