@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { DarkHeader } from '../../components/molecules/header/';
 import { YellowContentContainer, ContainerColumn, PokemonContainer, TrainerInformations, 
          PokemonsContainer, TeamContainer } from "../../components/atoms/container/style/";
-import { PlusButton } from '../../components/atoms/buttons/';
+import { PlusButton } from '../../components/atoms/buttons/style';
 import { Name, Age, TeamName } from '../../components/atoms/texts/';
 import { TeamIcon, Gender } from '../../components/atoms/icons/';
 import { Photo, PokemonImage } from '../../components/atoms/images/';

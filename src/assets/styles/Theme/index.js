@@ -2,6 +2,18 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 export const theme = {
+  yellow: {
+    color: '#2A2B2C',
+    backgroundColor: '#FBF107',
+    borderColor: '#FBF107',
+    hover: '#FFE600'
+  },
+  grey: {
+    color: '#FBF107',
+    backgroundColor: '#2A2B2C',
+    borderColor: '#2A2B2C',
+    hover: '#1E1F20'
+  },
   color: {
     darkGrey: '#1E1F20',
     grey: '#2A2B2C',

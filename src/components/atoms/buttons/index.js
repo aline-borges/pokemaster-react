@@ -1,65 +1,18 @@
-import styled from 'styled-components';
+import React from 'react';
+import { ButtonStyle, TextButton } from './style';
+import { Icon } from '../icons/';
 
-export const Button = styled.button`
-  background-color: transparent;
-  min-width: 10rem;
-  cursor: pointer;
-  outline: none;
-  border: 1px solid ${props => props.borderColor};
-  margin-top: 1.5rem;
-`;
-
-export const GreyButton = styled(Button)`
-  border: 1px solid ${props => props.theme.color.grey};
-`;
-
-export const YellowButton = styled(Button)`
-  border: 1px solid ${props => props.theme.color.yellow};
-`;
-
-export const TextButton = styled.p`
-  font-family: ${props => props.theme.font[1]};
-  font-size: ${props => props.theme.fontSize.ultraSmall};
-  font-weight: ${props => props.theme.fontWeight.black};
-  text-transform: uppercase;
-  letter-spacing: .5rem;
-  margin: 1rem;
-  padding: 1.6rem 3.2rem;
-  background-color: ${props => props.backgroundColor};
-  color: ${props => props.color};
-
-  &:hover {
-    background-color: ${props => props.hoverBackgroundColor};
-  }
-`;
-
-export const TextGreyButton = styled(TextButton)`
-  background-color: ${props => props.theme.color.grey};
-  color: ${props => props.theme.color.yellow};
-
-  &:hover {
-    background-color: ${props => props.theme.color.darkGrey};
-  }
-`;
-
-export const TextYellowButton = styled(TextButton)`
-  background-color: ${props => props.theme.color.yellow};
-  color: ${props => props.theme.color.grey};
-
-  &:hover {
-    background-color: ${props => props.theme.color.darkYellow};
-  }
-`;
-
-export const PlusButton = styled.button`
-  border: none;
-  background: transparent;
-  padding: 1.6rem;
-  cursor: pointer;
-  color: ${props => props.theme.color.extraLight};
-  font-size: ${props => props.theme.fontSize.large};
-  font-family: ${props => props.theme.font[1]};
-  outline: none;
-`;
+const Button = (props) => {
+  return(
+    <ButtonStyle yellow={props.yellow}>
+      <TextButton 
+        yellow={props.yellow}
+      >
+        {props.text}
+        <Icon src={props.src} />
+      </TextButton>
+    </ButtonStyle>
+  );
+}
 
 export default Button 

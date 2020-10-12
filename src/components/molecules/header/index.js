@@ -46,17 +46,17 @@ export const MenuOption = styled.li`
 export const DarkMenuOption = styled(MenuOption)`
   color: ${props => props.theme.color.grey};
 
+  a {
+    color: ${props => props.theme.color.grey};
+  }
+
   &:hover {
     padding: 8px 16px;
     background-color: ${props => props.theme.color.grey};
     color: ${props => props.theme.color.yellow};
-  }
 
-  li a {
-    color: ${props => props.theme.color.grey};
-
-    &:hover {
-      color: ${props => props.theme.color.yellow};
+    a {
+    color: ${props => props.theme.color.yellow};
     }
   }
 `;
