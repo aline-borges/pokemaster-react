@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { YellowContainer, GreyContainer, ContainerHalfway, ContainerRow  } from '../../components/atoms/container/style/';
+import { ContainerColumn, ContainerRow, ContainerHalfway  } from '../../components/atoms/container/style/';
 import Button from '../../components/atoms/buttons/';
 import { PikachuImage, AshImage } from '../../components/atoms/images/';
 import Header from '../../components/molecules/header/';
@@ -14,7 +14,7 @@ const Home = () => {
     <ContainerHalfway>
       <Header />
       <ContainerRow>
-        <GreyContainer>
+        <ContainerColumn>
           <PikachuImage src={pikachu} alt="pikachu" />
           <Button 
           yellow={true}
@@ -22,8 +22,8 @@ const Home = () => {
           text="Search For Pokemons">
             <Link to="/pokemons" />
           </Button>
-        </GreyContainer>
-        <YellowContainer>
+        </ContainerColumn>
+        <ContainerColumn>
           <AshImage src={ash} alt="ash" />
           <Button
           src={pokeball} 
@@ -31,7 +31,7 @@ const Home = () => {
           >
             <Link to="/trainerform" />
           </Button>
-      </YellowContainer>
+      </ContainerColumn>
       </ContainerRow>
     </ContainerHalfway>
   );

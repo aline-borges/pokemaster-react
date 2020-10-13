@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { DarkHeader } from '../../components/molecules/header/';
-import { YellowContentContainer, ContainerColumn, PokemonContainer, TrainerInformations, 
+import { ContainerColumn, PokemonContainer, TrainerInformations, 
          PokemonsContainer, TeamContainer } from "../../components/atoms/container/style/";
-import { PlusButton } from '../../components/atoms/buttons/style';
+import Container from '../../components/atoms/container/';
+import { PlusButton } from '../../components/atoms/buttons/style/style';
 import { Name, Age, TeamName } from '../../components/atoms/texts/';
 import { TeamIcon, Gender } from '../../components/atoms/icons/';
 import { Photo, PokemonImage } from '../../components/atoms/images/';
@@ -56,7 +57,7 @@ const TrainerHomeProfile = () => {
   };
 
   return (
-    <YellowContentContainer>
+    <Container yellow={true}>
       <DarkHeader />
       <ContainerColumn>
         {loading ? (<div>Carregando</div>)
@@ -101,7 +102,7 @@ const TrainerHomeProfile = () => {
           </>
         )}
       </ContainerColumn>
-    </YellowContentContainer>
+    </Container>
   );
 }
 

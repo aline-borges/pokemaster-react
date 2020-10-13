@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../components/atoms/buttons/style';
+import Button from '../../components/atoms/buttons/';
 import search from '../../assets/icons/search.png';
 
 const Pokemons = () => {

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Header from '../../components/molecules/header/';
-import { GreyContentContainer, ContainerForm } from '../../components/atoms/container/style/';
+import { ContainerForm } from '../../components/atoms/container/style/';
 import Button from '../../components/atoms/buttons/';
+import Container from '../../components/atoms/container/';
 import { YellowInput, RadioButtonContainer  } from '../../components/atoms/input/';
 import { DefaultPhoto } from '../../components/atoms/images/';
 import check from '../../assets/icons/check.png'
@@ -41,7 +42,7 @@ const TrainerForm = () => {
   };
 
   return(
-    <GreyContentContainer>
+    <Container>
       <Header />
       <form onSubmit={handleSubmit}>
         <ContainerForm>
@@ -69,7 +70,7 @@ const TrainerForm = () => {
           />
         </ContainerForm>
       </form>
-    </GreyContentContainer>
+    </Container>
   );
 }
 

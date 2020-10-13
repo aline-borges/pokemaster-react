@@ -1,5 +1,18 @@
 import styled from 'styled-components';
 
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: ${props => props.yellow ? props.theme.yellow.backgroundColor : 
+  props.theme.grey.backgroundColor };
+  color: ${props => props.yellow ? props.theme.yellow.color : props.theme.grey.color};
+  overflow: none;
+`;
+
 export const ContainerColumn = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,44 +28,8 @@ export const ContainerRow = styled.div`
   margin: auto;
 `;
 
-export const GreyContentContainer = styled(ContainerColumn)`
-  min-width: 100vw;
-  min-height: 100vh;
-  background-color: ${props => props.theme.color.grey};
-  color: ${props => props.theme.color.yellow};
-  overflow: none;
-`;
-
-export const YellowContentContainer = styled(ContainerColumn)`
-  min-width: 100vw;
-  min-height: 100vh;
-  background-color: ${props => props.theme.color.yellow};
-  color: ${props => props.theme.color.grey};
-  overflow: none;
-`;
-
-export const ContainerHalfway = styled(ContainerColumn)`
-  background-image: -webkit-linear-gradient(-30deg, #2A2B2C 57%, #FBF107 50%);
-  min-width: 100vw;
-  min-height: 100vh;
-`;
-
-export const Container = styled(ContainerColumn)`
-  color: ${props => props.color};
-  min-width: 50%;
-  min-height: 30rem;
-`;
-
-export const GreyContainer = styled(ContainerColumn)`
-  color: ${props => props.theme.color.yellow};
-  min-width: 50%;
-  min-height: 30rem;
-`;
-
-export const YellowContainer = styled(ContainerColumn)`
-  color: ${props => props.theme.color.grey};
-  min-width: 50%;
-  min-height: 30rem;
+export const ContainerHalfway = styled(Content)`
+  background-image: -webkit-linear-gradient(-30deg, #2A2B2C 58%, #FBF107 42%);
 `;
 
 export const ContainerForm = styled.div`
@@ -105,14 +82,6 @@ export const TrainerCard = styled.div`
 `;
 
 export const TrainerInformations = styled(TrainerListCards)`
-`;
-
-export const Grid = styled.div`
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  grid-gap: 1rem;
 `;
 
 export default ContainerColumn

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { YellowContentContainer, TrainerCard, TrainerListCards, TrainerInformations, Grid } from '../../components/atoms/container/style/';
+import { TrainerCard, TrainerListCards, TrainerInformations, ContainerColumn} from '../../components/atoms/container/style/';
+import Container from '../../components/atoms/container/';
 import { DarkHeader } from '../../components/molecules/header/';
 import { Gender } from '../../components/atoms/icons/';
 import { TrainerName, Age } from '../../components/atoms/texts/';
@@ -23,10 +24,10 @@ const Trainers = () => {
   }, []);
 
   return (
-    <YellowContentContainer>
+    <Container yellow={true}>
       <DarkHeader />
       <TrainerListCards>
-        <Grid>
+        <ContainerColumn>
           {trainers.map(trainer => (
             <TrainerCard key={trainer.id}>
               <Link to={{ pathname: `/trainer/${trainer.id}` }}>
@@ -43,9 +44,9 @@ const Trainers = () => {
               </Link>
             </TrainerCard>
           ))}
-       </Grid>
+       </ContainerColumn>
       </TrainerListCards>
-    </YellowContentContainer>
+    </Container>
   );
 }
 

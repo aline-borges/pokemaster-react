@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonStyle, TextButton } from './style';
+import { ButtonStyle, TextButton } from './style/style';
 import { Icon } from '../icons/';
 
 const Button = (props) => {
