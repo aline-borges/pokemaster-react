@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { DarkHeader } from '../../components/molecules/header/';
+import Header from '../../components/molecules/header/';
 import { ContainerColumn, PokemonContainer, TrainerInformations, 
          PokemonsContainer, TeamContainer } from "../../components/atoms/container/style/";
 import Container from '../../components/atoms/container/';
@@ -58,7 +58,7 @@ const TrainerHomeProfile = () => {
 
   return (
     <Container yellow={true}>
-      <DarkHeader />
+      <Header />
       <ContainerColumn>
         {loading ? (<div>Carregando</div>)
         : (

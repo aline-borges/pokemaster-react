@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { TrainerCard, TrainerListCards, TrainerInformations, ContainerColumn} from '../../components/atoms/container/style/';
 import Container from '../../components/atoms/container/';
-import { DarkHeader } from '../../components/molecules/header/';
+import Header from '../../components/molecules/header/';
 import { Gender } from '../../components/atoms/icons/';
 import { TrainerName, Age } from '../../components/atoms/texts/';
 
@@ -25,7 +25,7 @@ const Trainers = () => {
 
   return (
     <Container yellow={true}>
-      <DarkHeader />
+      <Header />
       <TrainerListCards>
         <ContainerColumn>
           {trainers.map(trainer => (

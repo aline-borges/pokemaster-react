@@ -10,7 +10,7 @@ const Button = (props) => {
       >
         {props.text}
         <Icon src={props.src} />
-      </TextButton>
+      </TextButton> 
     </ButtonStyle>
   );
 }

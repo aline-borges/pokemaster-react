@@ -5,7 +5,8 @@ import Header from '../../components/molecules/header/';
 import { ContainerForm } from '../../components/atoms/container/style/';
 import Button from '../../components/atoms/buttons/';
 import Container from '../../components/atoms/container/';
-import { YellowInput, RadioButtonContainer  } from '../../components/atoms/input/';
+import Input from '../../components/atoms/input/';
+import { RadioButtonContainer } from '../../components/atoms/input/style/style';
 import { DefaultPhoto } from '../../components/atoms/images/';
 import check from '../../assets/icons/check.png'
 import circle from '../../assets/images/photoSpace.png';
@@ -43,16 +44,16 @@ const TrainerForm = () => {
 
   return(
     <Container>
-      <Header />
+      <Header yellow={true} />
       <form onSubmit={handleSubmit}>
         <ContainerForm>
           <DefaultPhoto src={circle}  alt="space"/>
           Photo URL
-          <input type="text" name="photo" value={trainer.photo} onChange={handleInputChange} />
+          <input type="file" name="photo" value={trainer.photo} onChange={handleInputChange} />
           Name:
-          <YellowInput type="text" name="name" value={trainer.name} onChange={handleInputChange} />
+          <Input yellow={true} type="text" name="name" value={trainer.name} onChange={handleInputChange} />
           Age:
-          <YellowInput type="text" name="age" value={trainer.age} onChange={handleInputChange} />
+          <Input yellow={true}  type="text" name="age" value={trainer.age} onChange={handleInputChange} />
           Sex:
           <RadioButtonContainer>
             <div>

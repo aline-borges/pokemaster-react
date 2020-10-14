@@ -12,26 +12,25 @@ import ash from '../../assets/characters/ash.png';
 const Home = () => {
   return(
     <ContainerHalfway>
-      <Header />
+      <Header yellow={true} />
       <ContainerRow>
         <ContainerColumn>
           <PikachuImage src={pikachu} alt="pikachu" />
-          <Button 
-          yellow={true}
-          src={search} 
-          text="Search For Pokemons">
-            <Link to="/pokemons" />
-          </Button>
+          <Link to="/pokemons">
+            <Button 
+            yellow={true}
+            src={search} 
+            text="Search For Pokemons" />
+          </Link>
         </ContainerColumn>
         <ContainerColumn>
           <AshImage src={ash} alt="ash" />
-          <Button
-          src={pokeball} 
-          text="Be a Trainer">
-          >
-            <Link to="/trainerform" />
-          </Button>
-      </ContainerColumn>
+          <Link to="/trainerform">
+            <Button
+            src={pokeball} 
+            text="Be a Trainer" />
+          </Link>
+        </ContainerColumn>
       </ContainerRow>
     </ContainerHalfway>
   );
