@@ -47,6 +47,31 @@ export const TeamContainer = styled.div`
   margin-top: 1.2rem;
 `;
 
+export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.theme.color.white};
+  min-width: 30rem;
+  height: fit-content;
+  border-radius: 2.2rem;
+  margin: 2rem 0;
+`;
+
+export const Type = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.theme.color.ice};
+  min-width: 1rem;
+  border-radius: 1.8rem;
+  margin: 0.5rem 0;
+  padding: 0.8rem 1.6rem;
+  color: ${props => props.theme.color.white};
+`;
+
 export const PokemonContainer = styled.div`
   display: flex;
   flex-direction: column;

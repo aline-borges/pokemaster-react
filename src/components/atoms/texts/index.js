@@ -7,6 +7,13 @@ export const Name = styled.p`
   color: ${props => props.theme.color.grey};
 `;
 
+export const PokemonName = styled.p`
+  font-family: ${props => props.theme.font[1]};
+  font-size: ${props => props.theme.fontSize.small};
+  font-weight: ${props => props.theme.fontWeight.black};
+  color: ${props => props.theme.color.grey};
+`;
+
 export const TrainerName = styled(Name)`
   font-size: ${props => props.theme.fontSize.small};
 `;
